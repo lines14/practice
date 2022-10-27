@@ -1,37 +1,29 @@
-import warnings
+import paramiko
 
-from cryptography.utils import CryptographyDeprecationWarning
-warnings.filterwarnings(action='ignore', category=CryptographyDeprecationWarning)
+client = paramiko.SSHClient()
+client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+
+client.connect('192.168.1.215', 2222, username='lines14', key_filename='/home/lines14/.ssh/id_ed25519')
+
+stdin, stdout, stderr = client.exec_command('ls -a')
+
+print(stdout.readlines())
+
 
 import psycopg2
 from sshtunnel import SSHTunnelForwarder
 
-# For interactive work (on ipython) it's easier to work with explicit objects
-# instead of contexts.
+with SSHTunnelForwarder(
+('192.168.1.215', 2222),
+ssh_pkey="/home/lines14/.ssh/id_ed25519",
+ssh_private_key_password="106107",
+ssh_username="lines14",
+remote_bind_address=('127.0.0.1', 8080)) as server:
+    print(server.local_bind_port)
 
-# Create an SSH tunnel
-tunnel = SSHTunnelForwarder(
-    ('192.168.1.215', 2222),
-    ssh_username='lines14',
-    ssh_private_key='/home/lines14/.ssh/id_ed25519',
-    remote_bind_address=('localhost', 5432),
-    local_bind_address=('localhost',6543), # could be any available port
-)
-# Start the tunnel
-tunnel.start()
-
-# # Create a database connection
-# conn = psycopg2.connect(
-#     database='newdatabase',
-#     user='admindb',
-#     host=tunnel.local_bind_host,
-#     port=tunnel.local_bind_port,
-# )
-
-# # Get a database cursor
-# cur = conn.cursor()
-
-import os
-
-files = os.listdir("/home/lines14")
-print(files)
+    conn = psycopg2.connect(user='admindb', password='106107', dbname="newdatabase", host="127.0.0.1", port="5432")
+    curs = conn.cursor()
+    sql = "select * from table1"
+    curs.execute(sql)
+    rows = curs.fetchall()
+    print(rows)
