@@ -16,9 +16,12 @@ conn = psycopg2.connect(
     host=server.local_bind_host,
     port=server.local_bind_port,
     password='106107')
+
 cur = conn.cursor()
 cur.execute("select * from table1;")
 data = cur.fetchall()
-print(data)
+
+for y in data:
+    print(y)
 
 server.stop()
