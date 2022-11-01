@@ -17,11 +17,11 @@ server.start()
 
 try:
     conn = psycopg2.connect(
-    database="newdatabase",
-    user='admindb',
-    host=server.local_bind_host,
-    port=server.local_bind_port,
-    password='106107')
+        database="newdatabase",
+        user='admindb',
+        host=server.local_bind_host,
+        port=server.local_bind_port,
+        password='106107')
     conn.autocommit=False
     cur = conn.cursor()
 
