@@ -20,11 +20,18 @@ with warnings.catch_warnings():
             host=server.local_bind_host,
             port=server.local_bind_port,
             password='106107')) as conn:
+
+            conn.autocommit=False
             
             with closing(conn.cursor()) as cur:
                 cur.execute("select * from table1;")
-                data = cur.fetchall()
-                for y in data:
-                    print(y)
+                # data = cur.fetchall()
+                # print(data)
+                for row in cur:
+                    print(row)
+
+                # connection.rollback()
+                # or
+                # conn.commit()
 
         server.stop()

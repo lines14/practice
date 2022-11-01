@@ -22,12 +22,18 @@ conn = psycopg2.connect(
     port=server.local_bind_port,
     password='106107')
 
+conn.autocommit=False
+
 cur = conn.cursor()
 cur.execute("select * from table1;")
-data = cur.fetchall()
+# data = cur.fetchall()
+# print(data)
+for row in cur:
+    print(row)
 
-for y in data:
-    print(y)
+# connection.rollback()
+# or
+# conn.commit()
 
 cur.close()
 conn.close()
