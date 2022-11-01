@@ -30,4 +30,6 @@ data = cur.fetchall()
 for y in data:
     print(y)
 
+cur.close()
+conn.close()
 server.stop()
