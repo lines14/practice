@@ -1,5 +1,7 @@
 import warnings
 from cryptography.utils import CryptographyDeprecationWarning
+import psycopg2
+
 with warnings.catch_warnings():
     warnings.filterwarnings('ignore', category=CryptographyDeprecationWarning)
     from sshtunnel import SSHTunnelForwarder
@@ -13,7 +15,6 @@ server = SSHTunnelForwarder(
 
 server.start()
 
-import psycopg2
 conn = psycopg2.connect(
     database="newdatabase",
     user='admindb',
