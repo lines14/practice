@@ -2,9 +2,7 @@ import warnings
 from cryptography.utils import CryptographyDeprecationWarning
 with warnings.catch_warnings():
     warnings.filterwarnings('ignore', category=CryptographyDeprecationWarning)
-    import paramiko
-
-from sshtunnel import SSHTunnelForwarder
+    from sshtunnel import SSHTunnelForwarder
 
 server = SSHTunnelForwarder(
     ('192.168.1.215', 2222),
