@@ -9,7 +9,7 @@ server = SSHTunnelForwarder(
     ssh_username='lines14',
     ssh_pkey="/home/lines14/.ssh/id_ed25519",
     remote_bind_address=('127.0.0.1', 5432),
-    local_bind_address=('127.0.0.1', 43807))
+    local_bind_address=('127.0.0.1', 65535))
 
 server.start()
 
