@@ -1,3 +1,4 @@
 course/
 jupyter_notebook/
 modules/
+.env

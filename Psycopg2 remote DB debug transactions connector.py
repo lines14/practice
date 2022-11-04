@@ -1,31 +1,51 @@
 import warnings
 from cryptography.utils import CryptographyDeprecationWarning
 import psycopg2
+import os
+import dotenv
 
 with warnings.catch_warnings():
     warnings.filterwarnings('ignore', category=CryptographyDeprecationWarning)
     from sshtunnel import SSHTunnelForwarder
 
+# loading created .env file from Python PATH with login variables:
+
+dotenv.load_dotenv()
+
+#get() в случае отсутствия входящих данных выводит None вместо ошибки:
+
+DB_HOST = os.environ.get('DB_HOST')
+DB_PORT = os.environ.get('DB_PORT')
+DB_PORT = int(DB_PORT)
+DB_NAME = os.environ.get('DB_NAME')
+DB_USER = os.environ.get('DB_USER')
+DB_PASSWORD = os.environ.get('DB_PASSWORD')
+SSH_HOST = os.environ.get('SSH_HOST')
+SSH_PORT = os.environ.get('SSH_PORT')
+SSH_PORT = int(SSH_PORT)
+SSH_USERNAME = os.environ.get('SSH_USERNAME')
+SSH_PKEY = os.environ.get('SSH_PKEY')
+
 server = SSHTunnelForwarder(
-    ('192.168.1.215', 2222),
-    ssh_username='lines14',
-    ssh_pkey="/home/lines14/.ssh/id_ed25519",
-    remote_bind_address=('127.0.0.1', 5432),
-    local_bind_address=('127.0.0.1', 65535))
+    (SSH_HOST, SSH_PORT),
+    ssh_username=SSH_USERNAME,
+    ssh_pkey=SSH_PKEY,
+    remote_bind_address=(DB_HOST, DB_PORT),
+    local_bind_address=(DB_HOST, 65535))
 
 server.start()
 
 try:
     conn = psycopg2.connect(
-        database="newdatabase",
-        user='admindb',
+        database=DB_NAME,
+        user=DB_USER,
         host=server.local_bind_host,
         port=server.local_bind_port,
-        password='106107')
+        password=DB_PASSWORD)
     conn.autocommit=False
     cur = conn.cursor()
 
-    cur.execute("select * from table1;")
+    cur.execute("""select * from table1;""")
     # data = cur.fetchall()
     # print(data)
     for row in cur:
@@ -40,7 +60,7 @@ try:
     print('---------------------------------------------------------------------------------------------------')
 
     cur.execute(
-        """DELETE FROM table3 WHERE "rowid"='11';""")
+        """DELETE FROM table1 WHERE ""='';""")
     print('---------------------------------------------------------------------------------------------------')
     print('DELETING DATA...')
     print('---------------------------------------------------------------------------------------------------')
@@ -51,11 +71,11 @@ try:
 
     # conn.commit()
     # print('---------------------------------------------------------------------------------------------------')
-    # print("Транзакция успешно завершена")
+    # print('Транзакция успешно завершена')
 
 except (Exception, psycopg2.DatabaseError) as error:
     print('---------------------------------------------------------------------------------------------------')
-    print ("Ошибка в транзакции. Отмена всех остальных операций транзакции", error)
+    print ('Ошибка в транзакции. Отмена всех остальных операций транзакции', error)
     print('---------------------------------------------------------------------------------------------------')
     conn.rollback()
 
@@ -64,7 +84,7 @@ finally:
         cur.close()        
         conn.close()    
         print('---------------------------------------------------------------------------------------------------')    
-        print("Соединение с PostgreSQL закрыто")
+        print('Соединение с PostgreSQL закрыто')
         print('---------------------------------------------------------------------------------------------------')
 
 server.stop()
