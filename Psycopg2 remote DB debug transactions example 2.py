@@ -22,17 +22,17 @@ with connection:
 
         record = cursor.fetchone()[0]          
         ewallet_balance  = int(record)           
-        new_ewallet_balance -= item_price                      
+        ewallet_balance -= item_price                      
         sql_update_query = """Update ewallet set balance = %s where id = 23"""           
-        cursor.execute(sql_update_query,(new_ewallet_balance,))   
+        cursor.execute(sql_update_query,(ewallet_balance,))   
 
         query = """select balance from account where accountId = 2236781258763"""           
         cursor.execute(query)    
 
         record = cursor.fetchone()           
         account_balance  = int(record)           
-        new_account_balance += item_price           
+        account_balance += item_price           
         sql_update_query = """Update account set balance = %s where id = 132456"""           
-        cursor.execute(sql_update_query, (new_account_balance,))  
+        cursor.execute(sql_update_query, (account_balance,))  
                 
         print("Транзакция успешно завершена")

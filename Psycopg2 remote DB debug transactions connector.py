@@ -12,7 +12,7 @@ with warnings.catch_warnings():
 
 dotenv.load_dotenv()
 
-#get() в случае отсутствия входящих данных выводит None вместо ошибки:
+# get() в случае отсутствия входящих данных выводит None вместо ошибки:
 
 DB_HOST = os.environ.get('DB_HOST')
 DB_PORT = os.environ.get('DB_PORT')
