@@ -1,2 +1,2 @@
 # practice
-Some kind of tasks and scripts w/ VS code & jupyter notebook.
+Some kind of tasks and scripts with VS code.
