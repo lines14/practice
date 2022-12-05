@@ -1,2 +1,6 @@
 .env
 test.docx
+Client-chain-certificate.pem
+Client-private-key.key
+Server-chain-certificate.pem
+Server-private-key.key
