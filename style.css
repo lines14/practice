@@ -25,6 +25,9 @@ a {
 a:hover {
     color: greenyellow;
 }
+.h2-hide {
+    display: none;
+}
 header {
     height: 700px;
     background: #2c3e50;
