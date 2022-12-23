@@ -3,19 +3,15 @@
 }
 html {
     scroll-behavior: smooth; 
+    overflow-x: hidden;
 }
 body {
     font-family: 'Roboto Mono', monospace; 
     max-width: 1440px;
-    height: 100%;
     margin: 0 auto;
     color: white;
-    background-color: #4e4e4e;
-    display: flex;
-    flex-direction: column;
-    vertical-align: middle;
+    background-color: rgb(124, 124, 124);
     text-align: justify;
-    justify-content: space-between;
 }
 a {
     color: white;
@@ -25,13 +21,16 @@ a {
 a:hover {
     color: greenyellow;
 }
+h2 {
+    color: yellow;
+}
 .h2-hide {
     display: none;
 }
 header {
     height: 700px;
     background: #2c3e50;
-    flex: 0 0 auto;
+    border-radius: 20px;
 }
 .img {
     position: relative;
@@ -40,80 +39,67 @@ header {
 }
 .name {
     color: yellow;
-    font-weight: 700;
+    font-weight: bold;
     font-size: 40px;
-    font-style: italic;
-    text-align: left;
     position: relative;
     left: 550px;
     bottom: 400px;
 }
 .surname {
     color: yellow;
-    font-weight: 700;
+    font-weight: bold;
     font-size: 40px;
-    font-style: italic;
-    text-align: left;
     position: relative;
     left: 650px;
     bottom: 450px;
 }
 .speciality {
     color: yellow;
-    font-weight: 700;
+    font-weight: bold;
     font-size: 30px;
-    font-style: italic;
-    text-align: left;
     position: relative;
     left: 965px;
     bottom: 620px;
 }
 .contacts {
-    font-weight: 700;
+    font-weight: bold;
     font-size: 20px;
-    font-style: italic;
-    text-align: left;
     position: relative;
     left: 545px;
     bottom: 485px;
 }
 .nav-list {
-    justify-content: flex-end;
-    align-items: center; 
+    text-align: center;
     position: relative;
     bottom: 430px; 
-    left: 40px;
+    border: 1px solid white;
+    background-color: #777248;
+    border-radius: 20px;
+    margin: 50px;
 }
 .nav-item {
-    font-weight: 700;
+    font-weight: bold;
     font-size: 24px;
-    font-style: italic;
-    text-align: left;
     display: inline;
-    margin-right: 105px;
+    margin: 42px;
 }
 .summary {
     height: 470px;
     background: #194e72;
-    font-weight: 700;
+    font-weight: bold;
     font-size: 20px;
     padding: 80px;
-}
-.summary-h2 {
-    color: yellow;
-    text-align: left;
+    border-radius: 20px;
 }
 .skills {
-    vertical-align: middle;
     height: 545px;
     background: #185b6b;
     font-weight: 700;
     font-size: 20px;
-    text-align: left;
     padding: 80px;
+    border-radius: 20px;
 }
 .skills-h2 {
-    color: yellow;
     text-align: center;
 }
 .skills-list-1 {
@@ -131,58 +117,51 @@ header {
     display: list-item;
 }
 .code-example {
-    vertical-align: middle;
     height: 1090px;
     background: #371b77;
-    font-weight: 700;
+    font-weight: bold;
     font-size: 20px;
     padding: 80px;
+    border-radius: 20px;
 }
 .code-example-h2 {
-    color: yellow;
     text-align: right;
 }
 .projects {
-    vertical-align: middle;
     height: 360px;
     background: #68486b;
-    font-weight: 700;
+    font-weight: bold;
     font-size: 20px;
-    padding: 80px;  
+    padding: 80px;
+    border-radius: 20px;
 }
 .projects-h2 {
     color: yellow;
     position: relative;
     left: 100px;
-    text-align: left;
 }
 .github-1 {
-    text-align: left;
     font-size: 20px;
     position: relative;
     left: 350px;
 }
 .github-2 {
-    text-align: left;
     font-size: 20px;
     position: relative;
     left: 600px;
 }
 .education {
-    vertical-align: middle;
     height: 385px;
     background: #1a6375;
-    font-weight: 700;
+    font-weight: bold;
     font-size: 20px;
-    text-align: left;
     padding: 80px;
+    border-radius: 20px;
 }
 .education-h2 {
-    color: yellow;
     text-align: center;
 }
 .education-list {
-    float: left;
     position: relative;
     left: 150px;
 }
@@ -191,32 +170,30 @@ header {
     display: list-item;
 }
 .english {
-    vertical-align: middle; 
     height: 350px;
     background: #1a7566;
-    font-weight: 700;
+    font-weight: bold;
     font-size: 20px;
-    text-align: left;
     padding: 80px;
+    border-radius: 20px;
 }
 .english-h2 {
     color: yellow;
-    float: center;
     font-size: 30px;
     position: relative;
-    left: 350px;
-    text-align: left;
+    left: 300px;
 }
 .english-item {
     text-align: center;
     font-size: 40px;
     position: relative;
-    left: 350px;
+    left: 320px;
     color: red;
 }
 footer {
     height: 250px;
     background: #2c3e50;
+    border-radius: 20px;
 }
 .rss {
     float: right;
@@ -225,18 +202,30 @@ footer {
     top: 80px;
 }
 .link {
-    text-align: left;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: bold;
     position: relative;
     left: 235px;
     top: 80px;
 }
 .year {
-    text-align: left;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: bold;
     position: relative;
     left: 235px;
     top: 80px;
+}
+.top {
+    font-size: 20px;
+    line-height: 56px;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    height: 80px;
+    width: 80px;
+    border-radius: 40px;
+    background-color: #2c3e50;
+    position: fixed;
+	right: 151px;
+	bottom: 0px;
 }
