@@ -1,0 +1,230 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Chivo Mono', monospace;
+}
+html {
+    scroll-behavior: smooth; 
+}
+body {
+    max-width: 1440px;
+    margin: 0 auto;
+    color: #000000;
+    background-color: #000000;
+}
+header {
+    height: 550px;
+    background: #2c3e50;
+    color: #dbdbdb;
+}
+.img {
+    float: left;
+    position: relative;
+    top: 70px;
+    left: 80px;
+}
+.name {
+    font: italic bold 40px Arial, sans-serif;
+    text-align: left;
+    position: relative;
+    left: 175px;
+    top: 68px;
+}
+.surname {
+    font: italic bold 40px Arial, sans-serif;
+    text-align: left;
+    position: relative;
+    left: 220px;
+    top: 25px;
+}
+.speciality {
+    font: italic bold 30px Arial, sans-serif;
+    text-align: left;
+    position: relative;
+    left: 530px;
+    bottom: 155px;
+}
+.nav-list {
+    font: italic bold 24px Arial, sans-serif;
+    text-align: left;
+    position: relative;
+    left: 860px;
+    bottom: 295px;
+}
+.nav-list-1 {
+    font: italic bold 24px Arial, sans-serif;
+    text-align: left;
+    position: relative;
+    left: 1145px;
+    bottom: 295px;
+}
+a {
+    text-decoration: none;
+}
+.contacts {
+    font: italic bold 24px Arial, sans-serif;
+    text-align: left;
+    position: relative;
+    left: 500px;
+    bottom: 245px;
+}
+.summary {
+    vertical-align: middle;
+    height: 375px;
+    background: #194e72;
+    color: #dbdbdb;
+    font: bold 20px Arial, sans-serif;
+    text-align: justify;
+    padding: 65px;
+}
+.summary-h3 {
+    text-align: left;
+    color: rgb(243, 238, 238);
+}
+.skills-h3 {
+    text-align: center;
+    color: rgb(243, 238, 238);
+}
+.skills {
+    vertical-align: middle;
+    height: 455px;
+    background: #185b6b;
+    color: #dbdbdb;
+    font: bold 20px Arial, sans-serif;
+    text-align: left;
+    padding: 65px;
+}
+.skills-1 {
+    list-style-type: square;
+    display: list-item;
+}
+.skills-0 {
+    float: left;
+    position: relative;
+    left: 150px;
+}
+.skills-2 {
+    float: right;
+    position: relative;
+    right: 185px;
+}
+.code-example {
+    vertical-align: middle;
+    height: 1040px;
+    background: #371b77;
+    color: #dbdbdb;
+    font: bold 20px Arial, sans-serif;
+    padding: 65px;
+}
+.code-h3 {
+    text-align: right;
+    color: rgb(212, 204, 204);
+}
+.projects {
+    vertical-align: middle;
+    height: 295px;
+    background: #68486b;
+    color: #dbdbdb;
+    font: bold 20px Arial, sans-serif;
+    padding: 65px;  
+}
+.projects-h3 {
+    position: relative;
+    left: 100px;
+    text-align: left;
+    color: rgb(255, 255, 255);
+}
+.github {
+    text-align: left;
+    color: #dbdbdb;
+    font-size: 20px;
+    position: relative;
+    left: 350px;
+}
+.github-1 {
+    text-align: left;
+    color: #dbdbdb;
+    font-size: 20px;
+    position: relative;
+    left: 600px;
+}
+.education-h3 {
+    text-align: center;
+    color: #dbdbdb;
+}
+.education {
+    vertical-align: middle;
+    height: 330px;
+    background: #1a6375;
+    color: #dbdbdb;
+    font: bold 20px Arial, sans-serif;
+    text-align: left;
+    padding: 65px;
+}
+.education-1 {
+    list-style-type: square;
+    display: list-item;
+}
+.education-0 {
+    float: left;
+    position: relative;
+    left: 150px;
+}
+.education-2 {
+    float: right;
+    position: relative;
+    right: 185px;
+}
+.english {
+    vertical-align: middle; 
+    height: 330px;
+    background: #1a7566;
+    color: #dbdbdb;
+    font: bold 20px Arial, sans-serif;
+    text-align: left;
+    padding: 65px;
+}
+.english-0 {
+    float: center;
+    font-size: 30px;
+    position: relative;
+    left: 350px;
+    text-align: left;
+}
+.english-3 {
+    float: center;
+    text-align: center;
+    font-size: 40px;
+    position: relative;
+    left: 350px;
+    color: yellow;
+}
+
+.footer {
+    height: 260px;
+    background: #2c3e50;
+    color: #dbdbdb;
+}
+.rss {
+    float: right;
+    position: relative;
+    right: 235px;
+    top: 80px;
+}
+.link {
+    text-align: left;
+    color: #dbdbdb;
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+    left: 235px;
+    top: 80px;
+}
+.year {
+    text-align: left;
+    color: #dbdbdb;
+    font-size: 20px;
+    font-weight: 600;
+    position: relative;
+    left: 235px;
+    top: 80px;
+}

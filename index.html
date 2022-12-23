@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="CV#3. CV. Cross-Check">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="icon" href="./assets/ico/favicon.ico" type="image/ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@100&display=swap" rel="stylesheet">
+    <title>CV#3. CV. Cross-Check</title>
+</head>
+
+<body>
+    <header>
+        <section>
+            <img class="img" src="./assets/img/2faHQKPaPRE.jpg" alt="My photo" width="324" height="432">
+            <h1 class="name">
+                Anton
+            </h1>
+            <h2 class="surname">
+                Lipatov
+            </h2>
+            <br>
+            <p class="speciality">
+                Intern
+                <br>
+                frontend
+                <br>
+                developer
+            </p>
+        </section>
+        <section>
+            <nav>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="#1" class="nav-link">Summary</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#2" class="nav-link">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#3" class="nav-link">Code example</a>
+                    </li>
+                </ul>
+                <ul class="nav-list-1">
+                    <li class="nav-item">
+                        <a href="#4" class="nav-link">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#5" class="nav-link">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#6" class="nav-link">English</a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+        <section class="contacts">
+            <h3>
+                My contacts:
+            </h3>
+            <ul>
+                <li>phone: +77478595164</li>
+                <li>discord: Anton Lipatov (@lines14) lines14#6337</li>
+                <li>telegram: @lines14</li>
+                <li>email: tamdobro@yandex.ru</li>
+            </ul>
+        </section>
+    </header>
+    <main>
+        <section id="1" class="summary">
+
+            <h2 class="summary-h3">
+                About me:
+            </h2>
+
+            <p>
+                A professional medic by education, 
+                but I realized that the world of IT is more interesting and closer to me. 
+                I chose Python because everything can be done on it. 
+                I don't like to stand still and I'm constantly learning. 
+                Now i started to learn Javascript to become a full-stack developer! 
+                Practicing in freelance orders for process automation, parsing and systematization of data using Python scripts. 
+                Working with SQL (writing and debugging queries) and Excel (at the formula level), CRM administration, remote Linux server administration. 
+                As a hobby, I am engaged in the administration of network equipment, software configuration, PC assembly and configuration, skiing, visiting bars, music festivals and concerts.
+            </p>
+        </section>
+
+        <section id="2" class="skills">
+
+            <h2 class="skills-h3">
+                My skills:
+            </h2>
+
+            <ul class="skills-0">
+                <li class="skills-1">Python</li>
+                <li class="skills-1">Git</li>
+                <li class="skills-1">Docker</li>
+                <li class="skills-1">SQL</li>
+                <li class="skills-1">MS Excel</li>
+                <li class="skills-1">Linux</li>
+                <li class="skills-1">AWS</li>
+                <li class="skills-1">Setting up VPS/VDS servers</li>
+                <li class="skills-1">CRM</li>
+            </ul>
+            <ul class="skills-2">
+                <li class="skills-1">Hyper-V</li>
+                <li class="skills-1">Process automation</li>
+                <li class="skills-1">Server Administration</li>
+                <li class="skills-1">Teamwork</li>
+                <li class="skills-1">Responsibility</li>
+                <li class="skills-1">Stress resistance</li>
+                <li class="skills-1">Communication skills</li>
+                <li class="skills-1">Literacy</li>
+                <li class="skills-1">Result orientation</li>
+            </ul>
+
+        </section>
+        <section id="3" class="code-example">
+
+            <h2 class="code-h3">
+                Example of my code (Python encrypted echo-server):
+            </h2>
+
+            <pre>
+        import ssl
+        import socket
+        import stun
+        import os
+        import dotenv
+                        
+        dotenv.load_dotenv()
+                        
+        INTERNAL_HOST_IP = os.environ.get('INTERNAL_HOST_IP')
+        SOCKET_PORT = os.environ.get('SOCKET_PORT')
+        SOCKET_PORT = int(SOCKET_PORT)
+                        
+        out = f'connected to {stun.get_ip_info()[1]} => {INTERNAL_HOST_IP}\nПакет возвращён успешно: '
+                        
+        context = ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER)
+        context.load_cert_chain('/home/lines14/projects/Server-chain-certificate.pem', 
+                                    '/home/lines14/projects/Server-private-key.key')
+                        
+        with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
+            with context.wrap_socket(sock, server_side=True) as ssock:
+                ssock.bind(('', SOCKET_PORT))
+                ssock.listen(5)
+                        
+                while True:
+                    conn, addr = ssock.accept()
+                        
+                    with conn:
+                        print(f'Connected by {addr}')   
+                        
+                        while True:
+                            inn = conn.recv(1024)
+                            if not inn:
+                                break
+                            ssock_version = f'{conn.version()} '
+                            conn.sendall(ssock_version.encode() + out.encode() + inn)
+            </pre>
+        </section>
+
+        <section id="4" class="projects">
+
+            <h2 class="projects-h3">
+                My completed projects (links):
+            </h2>
+
+            <ul>
+                <li class="github">
+                    <a href="https://github.com/lines14/practice/blob/main/TLS_server_socket_autostart_script.py">
+                        Dockerized encrypted echo-remote-server with client app
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li class="github-1">
+                    <a href="https://github.com/lines14/python_templates/blob/main/Psycopg2%20remote%20DB%20autoclose%20transactions%20connector.py">
+                        Remote PostgreSQL administration tools
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <section id="5" class="education">
+
+            <h2 class="education-h3">
+                My education:
+            </h2>
+
+            <ul class="education-0">
+                <li class="education-1">Russian State Medical University - family doctor</li>
+                <li class="education-1">Moscow Medical College No. 7 - paramedic</li>
+                <li class="education-1">Moscow aviation institute - python development, refresher course</li>
+            </ul>
+        </section>
+
+        <div id="6" class="english">
+            <p class="english-0">
+                My english level is:
+            </p>
+            <p class="english-3">
+                B1
+            </p>
+        </div>
+    </main>
+
+    <footer class = "footer">
+        <div class="container">
+            <a href="https://rs.school/js/">
+                <img class="rss" src="./assets/svg/rss.svg" alt="RSSchool label">
+            </a>
+            <a class="link" href="https://github.com/lines14">
+                https://github.com/lines14
+            </a>
+            <p class="year">
+                2022
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
