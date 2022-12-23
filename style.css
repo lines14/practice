@@ -4,6 +4,19 @@
 html {
     scroll-behavior: smooth; 
 }
+body {
+    font-family: 'Roboto Mono', monospace; 
+    max-width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    color: white;
+    background-color: #4e4e4e;
+    display: flex;
+    flex-direction: column;
+    vertical-align: middle;
+    text-align: justify;
+    justify-content: space-between;
+}
 a {
     color: white;
     text-decoration: none;
@@ -11,17 +24,6 @@ a {
 }
 a:hover {
     color: greenyellow;
-}
-body {
-    font-family: 'Roboto Mono', monospace; 
-    max-width: 1440px;
-    height: 100%;
-    margin: 0 auto;
-    color: white;
-    background-color: #1a1a1a;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 header {
     height: 700px;
@@ -88,34 +90,28 @@ header {
     margin-right: 105px;
 }
 .summary {
-    vertical-align: middle;
-    height: 450px;
+    height: 470px;
     background: #194e72;
     font-weight: 700;
     font-size: 20px;
-    text-align: justify;
     padding: 80px;
 }
 .summary-h2 {
     color: yellow;
     text-align: left;
 }
-.skills-h2 {
-    color: yellow;
-    text-align: center;
-}
 .skills {
     vertical-align: middle;
-    height: 525px;
+    height: 545px;
     background: #185b6b;
     font-weight: 700;
     font-size: 20px;
     text-align: left;
     padding: 80px;
 }
-.skills-item {
-    list-style-type: square;
-    display: list-item;
+.skills-h2 {
+    color: yellow;
+    text-align: center;
 }
 .skills-list-1 {
     float: left;
@@ -127,70 +123,69 @@ header {
     position: relative;
     right: 185px;
 }
+.skills-item {
+    list-style-type: square;
+    display: list-item;
+}
 .code-example {
     vertical-align: middle;
-    height: 1115px;
+    height: 1090px;
     background: #371b77;
     font-weight: 700;
     font-size: 20px;
     padding: 80px;
 }
-.code-h3 {
+.code-example-h2 {
     color: yellow;
     text-align: right;
 }
 .projects {
     vertical-align: middle;
-    height: 350px;
+    height: 360px;
     background: #68486b;
     font-weight: 700;
     font-size: 20px;
     padding: 80px;  
 }
-.projects-h3 {
+.projects-h2 {
     color: yellow;
     position: relative;
     left: 100px;
     text-align: left;
 }
-.github {
+.github-1 {
     text-align: left;
     font-size: 20px;
     position: relative;
     left: 350px;
 }
-.github-1 {
+.github-2 {
     text-align: left;
     font-size: 20px;
     position: relative;
     left: 600px;
 }
-.education-h3 {
-    color: yellow;
-    text-align: center;
-}
 .education {
     vertical-align: middle;
-    height: 375px;
+    height: 385px;
     background: #1a6375;
     font-weight: 700;
     font-size: 20px;
     text-align: left;
     padding: 80px;
 }
-.education-1 {
-    list-style-type: square;
-    display: list-item;
+.education-h2 {
+    color: yellow;
+    text-align: center;
 }
-.education-0 {
+.education-list {
     float: left;
     position: relative;
     left: 150px;
 }
-.education-2 {
-    float: right;
-    position: relative;
-    right: 185px;
+.education-item {
+    list-style-type: square;
+    display: list-item;
 }
 .english {
     vertical-align: middle; 
@@ -201,7 +196,7 @@ header {
     text-align: left;
     padding: 80px;
 }
-.english-0 {
+.english-h2 {
     color: yellow;
     float: center;
     font-size: 30px;
@@ -209,16 +204,14 @@ header {
     left: 350px;
     text-align: left;
 }
-.english-3 {
-    float: center;
+.english-item {
     text-align: center;
     font-size: 40px;
     position: relative;
     left: 350px;
     color: red;
 }
-
-.footer {
+footer {
     height: 250px;
     background: #2c3e50;
 }
