@@ -19,7 +19,7 @@ a {
     transition: color 0.5s;
 }
 a:hover {
-    color: green;
+    color: greenyellow;
 }
 h2 {
     color: yellow;
@@ -28,7 +28,7 @@ h2 {
     display: none;
 }
 header {
-    height: 700px;
+    height: 600px;
     background: #2c3e50;
     border-radius: 80px;
 }
@@ -43,15 +43,15 @@ header {
     font-size: 40px;
     position: relative;
     left: 550px;
-    bottom: 400px;
+    bottom: 385px;
 }
 .surname {
     color: yellow;
     font-weight: bold;
     font-size: 40px;
     position: relative;
-    left: 650px;
-    bottom: 450px;
+    left: 659px;
+    bottom: 430px;
 }
 .speciality {
     color: yellow;
@@ -59,32 +59,72 @@ header {
     font-size: 30px;
     position: relative;
     left: 965px;
-    bottom: 620px;
+    bottom: 590px;
 }
 .contacts {
+    border: 1px solid red;
+    background-color: white;
+    color: green;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 175px;
+    width: 625px;
+    text-align: left;
     font-weight: bold;
     font-size: 20px;
     position: relative;
     left: 545px;
-    bottom: 485px;
+    bottom: 475px;
+    border-radius: 30px;
 }
-.nav-list {
+.h3-contacts {
+    margin-top: 15px;
+}
+.ul-contacts {
+    margin-bottom: 15px;
+}
+.aside {
+    border: 1px solid red;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 56px;
+    height: 362px;
+    width: 198px;
+    text-align: left;
+    position: fixed;
+    top: 130px;
+    right: 32px;
+    background-color: #2c3e50;
+    border-radius: 30px;
+    margin: 0px;
+}
+.aside-nav-item {
+    background-color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 36px;
+    height: 40px;
+    width: 175px;
+    border: 1px solid #2c3e50;
+    border-radius: 30px;
     text-align: center;
-    position: relative;
-    bottom: 473px; 
-    border: 1px solid white;
-    background-color: rgb(255, 255, 100);
-    border-radius: 80px;
-    margin: 58px;
-}
-.nav-item {
+    list-style: none;
     font-weight: bold;
-    font-size: 24px;
-    display: inline;
-    margin: 42px;
+    font-size: 20px;
 }
 .nav-link {
+    color: black;
+    transition: color 0s;
+}
+.nav-link:hover {
+    color: yellow;
+}
+.aside-nav-item:hover {
+    background-color: green;
+}
+.arrow-top {
     color: red;
+    transform: rotate(-90deg);
 }
 .summary {
     height: 470px;
@@ -217,18 +257,4 @@ footer {
     position: relative;
     left: 235px;
     top: 80px;
-}
-.top {
-    font-size: 20px;
-    line-height: 56px;
-    padding: 10px;
-    font-weight: bold;
-    text-align: center;
-    height: 80px;
-    width: 80px;
-    border-radius: 40px;
-    background-color: #2c3e50;
-    position: fixed;
-	right: 151px;
-	bottom: 30px;
 }
