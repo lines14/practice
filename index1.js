@@ -61,6 +61,9 @@
 // const upperFruits = fruits.map((name) => name.toUpperCase());
 // console.log(upperFruits);
 
-const numbers = [1, 3, 8, 9, 100, 23, 55, 34];
-const even = numbers.filter(num => num%2 === 0);
-console.log(even);
+// const numbers = [1, 3, 8, 9, 100, 23, 55, 34];
+// const even = numbers.filter(num => num%2 === 0);
+// console.log(even);
+
+let id = Symbol('id');
+console.log(id)
