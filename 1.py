@@ -59,13 +59,42 @@
 
 # print(modify_str())
 
-def to_upper(x):
-    def unpacking_arg_func(y):
-        return x(y).upper()
-    return unpacking_arg_func
+# def to_upper(x):
+#     def unpacking_arg_func(y):
+#         return x(y).upper()
+#     return unpacking_arg_func
 
-@to_upper
-def modify_str(y):
-    return y
+# @to_upper
+# def modify_str(y):
+#     return y
 
-print(modify_str('hello'))
+# print(modify_str('hello'))
+
+# def sayHiBye(firstName, lastName):
+#     def getFullName():
+#         return 'Hello' + " " + firstName + " " + lastName
+#     return getFullName()
+#     # print("Hello, " + getFullName())
+#     # print("Bye, " + getFullName())
+
+# print(sayHiBye('kek', 'kok'))
+
+# def sayHiBye(firstName, lastName):
+#     def getFullName():
+#         return 'Hello' + " " + firstName + " " + lastName
+#     kek = getFullName()
+#     return kek
+
+# print(sayHiBye('kek', 'kok'))
+
+def counter():
+    number = 1
+    def getCount():
+        return number+1
+    return getCount()
+
+kek = counter()
+
+print(kek)
+print(kek)
+print(kek)

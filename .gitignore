@@ -4,3 +4,4 @@ Client-chain-certificate.pem
 Makefile
 node_modules/
 package-lock.json
+.idea/

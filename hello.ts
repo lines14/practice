@@ -8,7 +8,7 @@
 
 namespace Company {
     export function isEmployeeEmail(a:string, b:string): boolean {
-      return a.includes(b) ? true : false
+      return a.includes(b);
     }
 }
 

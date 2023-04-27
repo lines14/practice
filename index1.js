@@ -97,7 +97,14 @@
 // const filter = (arr) => arr.filter( item => !!item === false );
 // console.log(filter([false, undefined, 0, 1, 'str']));
 
-function upperize(target, key, descriptor) {
+// const { Animal } = require('./animal');
+// const kekReader = (arg) => {
+//     if (arg === 1) Animal.voice();
+// }
+
+// kekReader(1);
+
+function upperize(target, propertyKey, descriptor) {
     descriptor.value = function(arg) {
         return arg.toUpperCase();
     }

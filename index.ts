@@ -141,8 +141,56 @@
 
 // forEach([8, 9], (n, index) => console.log(index + n));
 
+// const fruits: string[] = ['banana', 'mango', 'apple'];
+// const upperFruits: string[] = fruits.map((name: string): string => name.toUpperCase());
+// console.log(upperFruits);
+
+// const obj: { [key: string]: any } = {};
+// obj.kek = "value";
+// obj.kok = 88;
+
+// console.log(obj);
+
+// interface MyType extends Record<string,any> {
+//     prop1: string,
+//     prop2?: number,
+// }
+
+// const obj: MyType = { prop1: 'kek'};
+// obj.prop2 = 5;
+// obj.prop3 = [1, 2, 3];
+
+// console.log(obj);
+
+// type Numberify = (arr: string[]) => string;
+// const numberify: Numberify = (arr) => arr[0];
+// const list: string[] = ["1", "2", "3"];
+// console.log(numberify(list));
+
+// const numbers = [1, 2, 3];
+// const result = [];
+
+// const mapper = (arr: number[]): void => {
+//     for (let i of arr) {
+//         result.push(i);
+//     }
+// }
+
+// console.log(mapper(numbers));
+
+// let kek: undefined | null = null;
+// kek = undefined;
+// console.log(kek);
+
+// import { Animal } from './animal';
+// const kekReader = (): void => {
+//     Animal.voice();
+// }
+
+// kekReader();
+
 function upperize(target: Object, propertyKey: string, descriptor: PropertyDescriptor): void {
-    descriptor.value = function(arg: string) {
+    descriptor.value = function(arg: string): string {
         return arg.toUpperCase();
     }
 }
