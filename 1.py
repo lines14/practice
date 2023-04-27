@@ -25,9 +25,47 @@
 #     print(index)
 #     index+=1
 
-a = {}
-a[(1,2)] = 1
-a['lel'] = 2
-a[1] = 3
+# a = {}
+# a[(1,2)] = 1
+# a['lel'] = 2
+# a[1] = 3
 
-print(type(list(a.keys())[2]))
+# print(type(list(a.keys())[2]))
+
+# if True:
+#     test = True
+# print(test)
+
+# def func1():
+#     count = 0
+#     def inner():
+#         nonlocal count
+#         count+=1
+#     inner()
+#     return count
+
+# print(func1())
+# print(func1())
+# print(func1())
+
+# def to_upper(x):
+#     def unpacking_arg_func():
+#         return x().upper()
+#     return unpacking_arg_func
+
+# @to_upper
+# def modify_str():
+#     return 'kek'
+
+# print(modify_str())
+
+def to_upper(x):
+    def unpacking_arg_func(y):
+        return x(y).upper()
+    return unpacking_arg_func
+
+@to_upper
+def modify_str(y):
+    return y
+
+print(modify_str('hello'))

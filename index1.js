@@ -65,5 +65,48 @@
 // const even = numbers.filter(num => num%2 === 0);
 // console.log(even);
 
-let id = Symbol('id');
-console.log(id)
+// let id = Symbol('id');
+// console.log(id)
+
+// if (true) {
+//     var test = true; // используем var вместо let
+// }
+// console.log(test);
+
+// const func1 = function() {
+//     let count = 0;
+//     function inner() {
+//         ++count;
+//     }
+//     inner();
+//     return count;
+// }
+    
+// const func2 = function() {
+//     let count = 0;
+//     return inner = function() {
+//         return ++count;
+//     }
+// }
+
+// const counter = func2();
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+
+// const filter = (arr) => arr.filter( item => !!item === false );
+// console.log(filter([false, undefined, 0, 1, 'str']));
+
+function upperize(target, key, descriptor) {
+    descriptor.value = function(arg) {
+        return arg.toUpperCase();
+    }
+}
+class Cat {
+    @upperize
+    static kek(name) {
+        return name;
+    }
+}
+
+console.log(Cat.kek('hello'));

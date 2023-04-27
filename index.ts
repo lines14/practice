@@ -137,6 +137,20 @@
 
 // kek();
 
-function forEach(a: number[], b: (c: number, index: number) => void) {}
+// function forEach(a: number[], b: (c: number, index: number) => void) {}
 
-forEach([8, 9], (n, index) => console.log(index + n));
+// forEach([8, 9], (n, index) => console.log(index + n));
+
+function upperize(target: Object, propertyKey: string, descriptor: PropertyDescriptor): void {
+    descriptor.value = function(arg: string) {
+        return arg.toUpperCase();
+    }
+}
+class Cat {
+    @upperize
+    static kek(name: string): string {
+        return name;
+    }
+}
+
+console.log(Cat.kek('hello'));
