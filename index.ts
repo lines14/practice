@@ -189,16 +189,16 @@
 
 // kekReader();
 
-function upperize(target: Object, propertyKey: string, descriptor: PropertyDescriptor): void {
-    descriptor.value = function(arg: string): string {
-        return arg.toUpperCase();
-    }
-}
-class Cat {
-    @upperize
-    static kek(name: string): string {
-        return name;
-    }
-}
+// function upperize(target: Object, propertyKey: string, descriptor: PropertyDescriptor): void {
+//     descriptor.value = function(arg: string): string {
+//         return arg.toUpperCase();
+//     }
+// }
+// class Cat {
+//     @upperize
+//     static kek(name: string): string {
+//         return name;
+//     }
+// }
 
-console.log(Cat.kek('hello'));
+// console.log(Cat.kek('hello'));

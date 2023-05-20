@@ -242,6 +242,39 @@
 
 // console.log(filledRowsQuantity);
 
-const inputValue = '4';
-const val = inputValue >> 0;
-console.log(val);
+// const inputValue = '4';
+// const val = inputValue >> 0;
+// console.log(val);
+
+// const uniq = (arr) => {
+//     return arr.reduce((newArr, e) => {
+//         if (!(newArr.includes(e))) newArr.push(e);
+//         return newArr;
+//     }, []);
+// }
+// console.log(uniq([9, 9, 3, 8, 8]));
+
+// const getUserFriends = (json, counter) => {
+//     const parsedJson = JSON.parse(json);
+//     const friendsSet = new Set();
+//     for (let i = 0; i < parsedJson.friends.length; i++) {
+//         if (parsedJson.friends[i].includes(counter)) {
+//             friendsSet.add(...(parsedJson.users.reduce((acc, elem) => {
+//                 if (counter !== elem.id && parsedJson.friends[i].includes(elem.id)) acc.push(elem);
+//                 return acc;
+//             }, [])));
+//         }
+//     }
+//     return [...friendsSet];    
+// }
+// const userJson = JSON.stringify({
+//     users: [
+//         { id: 1, name: 'John', age: 20 },
+//         { id: 2, name: 'Mary', age: 21 },
+//         { id: 3, name: 'Kek', age: 25 },
+//     ],
+//     friends: [
+//         [2, 3], [2, 3], [1, 3]
+//     ],
+// });
+// console.log(getUserFriends(userJson, 3));

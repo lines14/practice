@@ -87,14 +87,37 @@
 
 # print(sayHiBye('kek', 'kok'))
 
-def counter():
-    number = 1
-    def getCount():
-        return number+1
-    return getCount()
+# def counter():
+#     number = 1
+#     def getCount():
+#         return number+1
+#     return getCount()
 
-kek = counter()
+# kek = counter()
 
-print(kek)
-print(kek)
-print(kek)
+# print(kek)
+# print(kek)
+# print(kek)
+
+# def upper_letters(arg_func):
+#     def unpacking_arg_func():
+#         return arg_func().upper()
+#     return unpacking_arg_func
+
+# @upper_letters
+# def example():
+#     return 'Hello'
+    
+# print(example())
+
+# def upper_letters(arg_func):
+#     return lambda: arg_func().upper()
+# @upper_letters
+# def example():
+#     return 'kek'  
+# print(example())
+
+point = ({'name': 1}, {'name': 2})
+# point[0] = {'name': 3}
+point[0]['name'] = 3
+print(point)
